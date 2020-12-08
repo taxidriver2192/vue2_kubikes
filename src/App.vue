@@ -1,16 +1,11 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <Map/>
   </div>
 </template>
 
 <script>
 import Map from './components/Map';
-
-import * as VueGoogleMaps from 'vue2-google-maps';
-vue.use
-
 
 export default {
   name: 'App',

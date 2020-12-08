@@ -2,15 +2,25 @@
   <div>
       <h1>test overskrift</h1>
       <p>{{ coordinates.lat }} Latitude, {{ coordinates.lng }} Longitude</p>
-      <GmapMap
-        :center="{lat:10, lng:10}"
-        :zoom="7"
-        ></GmapMap>
+        <GmapMap
+            :center="{lat:10, lng:10}"
+            :zoom="7"
+            style="width:500px; height:500px;"
+        ><GmapMarker
+            :key="index"
+            v-for="(m, index) in markers"
+            :position="m.position"
+            :clickable="true"
+            :draggable="true"
+            @click="center=m.position"
+            />
+        </GmapMap>
   </div>
 </template>
 
 <script>
 export default {
+    name: "my-map",
     data() {
         return {
             coordinates:{
@@ -25,9 +35,7 @@ export default {
             .then(coordinates => {
                 this.coordinates = coordinates;
             })
-            .catch(error => alert(error))
-
-    
+            .catch(error => alert(error));
     }
 }
 </script>
