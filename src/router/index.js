@@ -1,5 +1,5 @@
-import Vue from '../../node_modules/vue'
-import VueRouter from '../../node_modules/vue-router'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 import LoginPage from '../views/LoginPage.vue';
 import ADMCyclePage from '../views/ADMCyclePage.vue';
 import ADMSettingsPage from '../views/ADMSettingsPage.vue';
@@ -74,14 +74,12 @@ const routes = [
     path: '/',
     redirect: '/Login'
   }
-
-
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  path: routes
 })
 
 export default router

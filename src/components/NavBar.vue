@@ -1,28 +1,23 @@
 <template>
-    <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light ">
-          <button style="text-align: center; background: none; border: none;" id="NAVOverview"
-            v-on:click="OverviewPage">
-            <i class="fas fa-map-marker-alt" style="font-size: 40px;"></i><br>
-            Kort
-          </button>
-          <button style="text-align: center; background: none; border: none;" id="NAVQR" v-on:click="QRPage">
-            <i class="fas fa-qrcode" style="font-size: 40px;"></i><br>
-            Scan Cykel
-          </button>
-          <button style="text-align: center; background: none; border: none;" id="NAVProfile" v-on:click="Profile">
-            <i class="fas fa-user-alt" style="font-size: 40px;"></i><br>
-            Profil
-          </button>
-          <button style="text-align: center; background: none; border: none;" id="NAVSettings" v-on:click="Settings">
-            <i class="fas fa-wrench" style="font-size: 40px;"></i><br>
-            Indstillinger
-          </button>
-        </nav>
+    <div id='NavBar' class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light ">
+        <router-link to= "/QR" id="QR link">
+            <h1> QR Skanner</h1>
+        </router-link>
+        <router-link to="/Cycles" id="cycles list link">
+            <h1>Kort</h1>
+        </router-link>
+        <router-link to="/Profil" id="profil link">
+            <h1>Profil</h1>
+        </router-link>
+        <router-link to="/Settings" id="settings link">
+            <h1>Indstillinger</h1>
+        </router-link>
+    </div>
 </template>
 
 <script>
 export default {
-    name: NavBar
+    name: 'NavBar',
 }
 </script>
 
