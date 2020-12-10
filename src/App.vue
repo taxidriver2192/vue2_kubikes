@@ -1,16 +1,19 @@
 <template>
   <div id="app">
+    <Login/>
     <Map/>
   </div>
 </template>
 
 <script>
 import Map from './components/Map';
+import Login from './components/Login';
 
 export default {
   name: 'App',
   components: {
-    Map
+    Map,
+    Login
   }
 }
 </script>
