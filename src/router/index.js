@@ -10,70 +10,66 @@ import CyclesPage from '../views/CyclesPage.vue';
 import ProfilePage from '../views/ProfilePage.vue';
 import QRScanPage from '../views/QRScanPage.vue';
 import SettingsPage from '../views/SettingsPage.vue';
-import UpdateUserPage from '../views/UpdateUserPage.vue';
+import UpdateUserPage from '../views/EditUserPage.vue';
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     paths: '/Login',
-    name: 'LoginPage',
+    name: 'LoginPageRoute',
     component: LoginPage,
   },
   {
     paths: '/ADMCycles',
-    name: 'ADMCyclesPage',
+    name: 'ADMCyclesPageRoute',
     component: ADMCyclePage,
   },
   {
     paths: '/ADMSettings',
-    name: 'ADMSettingsPage',
+    name: 'ADMSettingsPageRoute',
     component: ADMSettingsPage,
   },
   {
     paths: '/ADMUsers',
-    name: 'ADMUsersPage',
+    name: 'ADMUsersPageRoute',
     component: ADMUsersPage,
   },
   {
     paths: '/Create',
-    name: 'CreateUserPage',
+    name: 'CreateUserPageRoute',
     component: CreateUserPage,
   },
   {
     paths: '/Cycles',
-    name: 'CyclesListPage',
+    name: 'CyclesListPageRoute',
     component: CycleListPage,
   },
   {
     paths: '/cycle/:id',
-    name: 'CyclePage',
+    name: 'CyclePageRoute',
     component: CyclesPage,
   },
   {
     paths: '/Profile',
-    name: 'ProfilePage',
+    name: 'ProfilePageRoute',
     component: ProfilePage,
   },
   {
     paths: '/QR',
-    name: 'QRScanPage',
+    name: 'QRScanPageRoute',
     component: QRScanPage,
   },
   {
     paths: '/Settings',
-    name: 'SettingsPage',
+    name: 'SettingsPageRoute',
     component: SettingsPage,
   },
   {
     paths: '/Update/:id',
-    name: 'UpdateUserPage',
+    name: 'UpdateUserPageRoute',
     component: UpdateUserPage
   },
-  {
-    path: '/',
-    redirect: '/Login'
-  }
 ]
 
 const router = new VueRouter({
@@ -81,5 +77,5 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   path: routes
 })
-
+router.replace({ path: '/', redirect: '/Login'})
 export default router

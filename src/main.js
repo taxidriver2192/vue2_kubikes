@@ -1,17 +1,19 @@
 import Vue from 'vue'
 import App from './App.vue'
+/*
 import VueGeolocation from 'vue-browser-geolocation'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
-
+*/
 Vue.config.productionTip = false
+/*
 Vue.use(VueGeolocation)
 
-import * as VueGoogleMaps from 'vue2-google-maps'
-import router from './router'
+import * as VueGoogleMaps from 'vue2-google-maps' */
+import router from './router' 
 
-Vue.use(VueGoogleMaps, {
+/* Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyC88_81IEqbeUIX9EcF-eDt3LRQujgMMKc',
     libraries: 'places', // This is required if you use the Autocomplete plugin
@@ -35,7 +37,7 @@ Vue.use(VueGoogleMaps, {
   //// then set installComponents to 'false'.
   //// If you want to automatically install all the components this property must be set to 'true':
   installComponents: true
-})
+}) */
 
 new Vue({
   router,
