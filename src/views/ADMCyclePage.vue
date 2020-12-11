@@ -106,31 +106,19 @@ export default {
       this.cycles2 = Result.data.total;
     },
     async ADMDeleteBike() {
-      const Result = await axios.delete(baseCycleUri + cycle.cycle_id);
+      const Result = await axios.delete(baseCycleUri + this.cycle.cycle_id);
       this.responseId = Result.data.id;
     },
     async Unavaliable() {
       let urlGet = baseCycleUri + "start/" + this.select;
-      let obj = {
-        title: "Alert Title",
-        message: "Unavailable now",
-        type: "success",
-      };
       return axios.put(urlGet, this.statusU);
-      this.$refs.simplert.openSimplert(obj);
     },
     async Avaliable() {
       let urlGet = baseCycleUri + "slut/" + this.select;
       return await axios.put(urlGet, this.statusA);
-      let obj = {
-        title: "Alert Title",
-        message: "Available now",
-        type: "success",
-      };
-      this.$refs.simplert.openSimplert(obj);
     },
     async ADMHentBeskederCykel() {
-      let UrlGet = baseCycleUri + "cycel/" + parseInt(this.select);
+      let UrlGet = baseCycleUri + "cycle/" + parseInt(this.select);
       const Result = await axios.get(UrlGet);
       this.messagesBike = Result.data;
     },
