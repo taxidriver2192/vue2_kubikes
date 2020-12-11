@@ -1,5 +1,5 @@
 <template>
-    <div id='NavBar' class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light ">
+    <div id='NavBar'>
         <router-link to= "/QR" id="QR link">
             <h1> QR Skanner</h1>
         </router-link>
